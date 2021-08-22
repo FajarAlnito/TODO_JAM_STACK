@@ -1,0 +1,27 @@
+POST http://localhost:3000/api/createTodo HTTP/1.1
+Content-Type: application/json
+
+{
+  "description": "My first TODO"
+}
+
+###
+PUT http://localhost:3000/api/updateTodo HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "recTp9vr4sTCdXWW3",
+  "fields": {
+    "description": "My first TODO EDITED",
+    "completed": false
+  }
+}
+
+###
+DELETE  http://localhost:3000/api/deleteTodo HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "recZlIPRdxJJHWILF"
+}
+
