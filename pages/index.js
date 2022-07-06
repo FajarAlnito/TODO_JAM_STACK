@@ -26,7 +26,7 @@ export default function Home({ initialTodos, user }) {
 			</Head>
 			<Navbar user={user} />
 			<main>
-				{user && (
+				{user ? (
 					<>
 						<h1 className="text-2xl font-bold mb-4 text-center">
 							My Todo List
@@ -36,8 +36,9 @@ export default function Home({ initialTodos, user }) {
 							{todos && todos.map((todo) => <Todo key={todo.id} todo={todo} />)}
 						</ul>
 					</>
+				) : (
+					<h1 className="text-xl">Please login to use the app</h1>
 				)}
-				<h1 className="text-xl">Please login to use the app</h1>
 			</main>
 		</div>
 	);
