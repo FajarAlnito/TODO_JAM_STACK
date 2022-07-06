@@ -14,6 +14,6 @@ export default auth0.requireAuthentication(async (req, res) => {
 		res.json(minifiedRecord);
 	} catch (err) {
 		res.statusCode = 500;
-		res.json({ msg: 'something went wrong' });
+		res.json({ msg: 'something went wrong!' });
 	}
 });
